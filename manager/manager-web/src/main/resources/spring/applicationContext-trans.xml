@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd
+ http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+">
+
+    <!--配置事务管理器的切面-->
+   <!-- <import resource="applicationContext-dao.xml"/>
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+&lt;!&ndash;    配置事务传播行为：其实就是哪些方法应该收到什么样的事务控制&ndash;&gt;
+    <tx:advice id="tx_advice">
+        <tx:attributes>
+            <tx:method name="insert*"/>
+            <tx:method name="add*"/>
+            <tx:method name="update*"/>
+            <tx:method name="modify*"/>
+            <tx:method name="delete*"/>
+            <tx:method name="remove*"/>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="select*" read-only="true"/>
+            <tx:method name="query*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>-->
+
+</beans>
