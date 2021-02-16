@@ -13,11 +13,11 @@
 
 ### 项目结构
 
-![maven聚合项目结构](https://gitee.com/eric0228/pic-go-images/raw/master/img/image-20210216105100185.png)
+<img src="https://gitee.com/eric0228/pic-go-images/raw/master/img/image-20210216105100185.png" alt="maven聚合项目结构" style="zoom:80%;" />
 
 ### 层次调用图
 
-![20201223maven_manager调用层次结构图](https://gitee.com/eric0228/pic-go-images/raw/master/img/20201223maven_manager调用层次结构图.png)
+<img src="https://gitee.com/eric0228/pic-go-images/raw/master/img/20201223maven_manager调用层次结构图.png" alt="20201223maven_manager调用层次结构图" style="zoom:80%;" />
 
 `manager-pojo` 作为提供管理实体信息的子模块；
 
@@ -77,13 +77,13 @@ ALTER TABLE user　ADD CONSTRAINT ck_user_gender CHECK(gender='男' or gender='�
 
 5. 因为在 `manager-web` 子模块中配置了 tomcat 插件，所以是可以使用此插件来进行运行 web 项目的，但是在运行之前，需要把每个子模块进行打包，这里借助 IDEA 自带的界面操作方式，如下：
 
-   ![Maven聚合项目打包](https://gitee.com/eric0228/pic-go-images/raw/master/img/image-20210216111029953.png)
+   <img src="https://gitee.com/eric0228/pic-go-images/raw/master/img/image-20210216111029953.png" alt="Maven聚合项目打包" style="zoom:80%;" />
 
    然后点击执行 manager 中 Lifecycle 下的 install，就会把整个项目包括子模块进行安装，安装成功后会在控制台显示 `BUILD SUCCESS` 信息。
 
    最后使用 manager-web 模块下的 tomcat 插件，点击 run 命令，使容器运行起来：
 
-   ![Maven聚合项目运行tomcat](https://gitee.com/eric0228/pic-go-images/raw/master/img/image-20210216111230163.png)
+   <img src="https://gitee.com/eric0228/pic-go-images/raw/master/img/image-20210216111230163.png" alt="Maven聚合项目运行tomcat" style="zoom:80%;" />
 
 6. tomcat 容器运行成功以后，使用浏览器访问 `localhost:9090/addUser` 路径（因为我们在配置 tomcat 的时候把其访问端口配置为了 9090），即可进入功能页面，之后在 Web 页面录入用户信息提交后会自动添加至我们的数据库中（演示略）。
 
